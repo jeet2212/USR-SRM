@@ -20,7 +20,7 @@
 // Reset: active-low synchronous via rst_n
 // Enable: when ena=1, operations occur on rising edge of clk
 
-module tt_um_kavinmalar_usr (
+module tt_um_universal_shift_register (
 `ifdef GL_TEST
     // Power pins for gate-level sims (matched by tb.v)
     input  wire VPWR,
