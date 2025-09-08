@@ -1,42 +1,40 @@
 # Tiny Tapeout project information
 project:
-  title:        ""      # Project title
-  author:       ""      # Your name
-  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  ""      # One line description of what your project does
-  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
-  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+  title:        "Universal Shift Register"   # Project title
+  author:       "Jeet"              # Your name
+  discord:      ""                           # Optional
+  description:  "4-bit Universal Shift Register with hold, shift left, shift right, and parallel load"
+  language:     "Verilog"
+  clock_hz:     0                            # Clock frequency (0 = external clock provided)
 
-  # How many tiles your design occupies? A single tile is about 167x108 uM.
-  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+  # How many tiles your design occupies? A single tile is ~167x108 µm.
+  tiles: "1x1"
 
-  # Your top module name must start with "tt_um_". Make it unique by including your github username:
-  top_module:  "tt_um_example"
+  # Top module name (must start with tt_um_)
+  top_module:  "tt_um_universal_shift_register"
 
   # List your project's source files here.
-  # Source files must be in ./src and you must list each source file separately, one per line.
-  # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
+  # Files must be in ./src and listed one per line.
   source_files:
     - "project.v"
 
-# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
-# This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
+# Pinout for datasheet/website
 pinout:
   # Inputs
-  ui[0]: ""
-  ui[1]: ""
-  ui[2]: ""
-  ui[3]: ""
-  ui[4]: ""
-  ui[5]: ""
-  ui[6]: ""
-  ui[7]: ""
+  ui[0]: "S0"
+  ui[1]: "S1"
+  ui[2]: "SL"
+  ui[3]: "SR"
+  ui[4]: "D0"
+  ui[5]: "D1"
+  ui[6]: "D2"
+  ui[7]: "D3"
 
   # Outputs
-  uo[0]: ""
-  uo[1]: ""
-  uo[2]: ""
-  uo[3]: ""
+  uo[0]: "Q0"
+  uo[1]: "Q1"
+  uo[2]: "Q2"
+  uo[3]: "Q3"
   uo[4]: ""
   uo[5]: ""
   uo[6]: ""
